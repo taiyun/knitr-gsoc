@@ -32,17 +32,44 @@ Yes. I have been in touch with the mentors via email since January 19th, we disc
 
 ## Main steps:
 
+This project consists of three parts: extending the HTML/markdown support in the **knitr** package, building a website dynamically with these features, and finally integrating with pandoc so that non-LaTeX users can do reproducible research easily.
 
+The first part: adding the new HTML features in the **knitr** package. The main goals are to support animations and code highlighting themes in HTML pages. The function `saveHTML()` in the **animation** package can insert animations into an HTML page based on a JavaScript library **SciAnimator**, and we want to add the similar support to **knitr** as well. This has been done for LaTeX but not for HTML. For highlighting themes, there have been a series of themes ported from the [highlight](http://www.andre-simon.de) package as CSS files in **knitr** but they are not yet directly usable to the HTML output. These themes will hopefully make R code much more readable in the web page. To complete this part, I will learn how `animation::saveHTML()` and highlighting themes work. After this part is done, we will be able to easily generate animations in web pages from R plots dynamically.
+
+The second part: applying the features developed in the first part to the animation website (http://animation.yihui.name), which is a gallery of statistical animations. Currently this website is manually maintained: R code was pasted into the pages and all R plots were generated separately. The goal of this part is to rewrite the website with **knitr** and markdown, maintain it on GitHub and set up a smooth workflow on building websites with R. Markdown is easier to write than native HTML code, and it accepts HTML code as well, so we can insert JavaScript in markdown to support animations. I may not be able to finish the whole website, but this will introduce a new approach to the R community on how to show examples of R packages. Once the source code of the website is finished, the maintainer only need to re-compile the code occasionally to rebuild the whole site, which is certainly way easier to maintain and verify if the code still works. In other words, we are building reproducible websites with R. The other point is we are also encouraging online collaboration among R users, because we only maintain source code (output is automatically generated) which is on GitHub, and other users are free to contribute new examples or pages easily through the version control tool GIT. This will bring new directions to some existing well-known websites on R like the [R Graph Gallery](http://addictedtor.free.fr/graphiques/) (new graphics examples can be merged in with GIT and compiled dynamically with **knitr**) and UCLA [R tutorials](http://www.ats.ucla.edu/stat/r/code/) (in which **knitr** has already been used). To complete this part, I will learn new tools of building websites and see how to integrate them with R and **knitr**. The major tools are [Jekyll](https://github.com/mojombo/jekyll) (a light-weight blog engine) and [bootstrap](https://github.com/twitter/bootstrap) (building themes).
+
+The third part: integrating **knitr** with pandoc. Pandoc is a universal document converter; it can convert markdown to many other document formats like HTML, LaTeX/PDF, Word (Microsoft or Open Office) and EPub, etc. This part aims at non-LaTeX users because LaTeX is definitely a high barrier for people who want to do reproducible research with R, but we do not really have to do it in LaTeX. I will write wrappers to call pandoc in **knitr** to call pandoc to convert markdown files to other document formats, including Word and HTML as well as its variants like HTML5 slides, which will be interesting applications. As the first step to test the results of this part, I will write a package vignette in markdown for the **corrplot** package and convert it to HTML under the `doc` directory of the package, illustrating why R package authors do not have to bury themselves in LaTeX.
+
+By the time when this project is finished, the paradigm of reproducible research and dynamic report generation with R will be fundamentally easier. People no longer need to worry about all sorts of LaTeX problems which are often very distracting and discouraging to novices. As long as an R user knows how to write R code, she will be able to generate reports dynamically due to the simple nature of markdown. This project will not only benefit novices, but also R developers. The traditional R package documentation is often boring to read due to lack of real output (numeric or graphical) of the examples code, and this project will point new directions of documenting R packages to package authors: we can build visually appealing websites with rich examples for our packages, and we can convert the documentation to a variety of other formats without extra efforts.
 
 ## Timeline:
 
-
+- Before May 21
+  - Be more familiar with several related tools, including pandoc, twitter bootstrap, HTML5, CSS, XML.
+  - Design some highlight css for **knitr**.
+- May 21 ~ July 03
+  - The first part: adding the missing HTML features to **knitr** package
+- July 04 ~ July 13
+  - The second part: rewrite the animation website (perhaps partially) and set up a workflow on building websites with R
+  - Submit the mid-term evaluation.
+- June 14 ~ August 13
+  - The third part: integrate **knitr** with pandoc and make reproducible research easier.
+- August 14 ~ August 19
+  - Bug fixing and tests.
+  - Submitting the final evaluation.
 
 ## Perceived obstacles and critical objectives:
 
-The second part of our project is not hard to handle, however it may be a little time-consuming. If so, we can just choose one website to rewrite and generate dynamic reports.
+Possible obstacles are:
 
-The third part is depended on RGoogleDocs or pandocs, consequently, it is verytroublesome if these two packages have fatal bugs that related to this project.
+- I need to learn the internals of the **knitr** package, especially the hooks; I'm not familiar with them yet but there are plenty of other hooks, so it should not be a real problem
+- Figure out a smooth workflow for novices to generate dynamic reports; especially the pandoc conversion because it involves with calling an external program
+
+Critical objectives:
+
+- building appealing and useful websites with R quickly
+- online collaboration in reproducible research
+- new directions for R package authors to write documentation
 
 ## References:
 
@@ -61,7 +88,7 @@ I will communicate with mentors via email frequently; actually, I have been in t
 
 ## How do you propose to ensure code is submitted / tested?
 
-The homepage of knitr is here: https://github.com/yihui/knitr , I will submit my code via GIT. It is very easy to testing code since our target is getting dynamic report in the web. For example, the code can be tested via the second part: if there is something wrong in the code, then we cannot get the expected web pages.
+The main repository of **knitr** is here: https://github.com/yihui/knitr, I will fork it and develop code in my forked repository; finally I will send pull requests back to the main repository via GIT. Since this project is involved with output (web pages) all the time, my code can be tested by looking at those pages. Meanwhile, I will write test cases for my code and it will be tested with the **testthat** package when running `R CMD check`.
 
 ## What is your contigency plan for things not going to schedule?
 
