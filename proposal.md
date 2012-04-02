@@ -94,9 +94,9 @@ The main repository of **knitr** is here: https://github.com/yihui/knitr, I will
 
 The first part's job is the core in this project.
 
-If I find that the time is not going to schedule in the first or second part, I will reduce the second part's time: just choose one website to rewrite and generate dynamic reports.
+If I find that the time is not sufficient to finish first or second part, I will reduce the second part's time: just choose one website to rewrite and generate dynamic reports.
 
-If I find that the time is not going to schedule in the third part, I will just choose one method after simple comparing.
+If I find that the time is not sufficient to finish the third part, I will just choose one method after simple comparing.
 
 # BIOGRAPHICAL INFORMATION
 
