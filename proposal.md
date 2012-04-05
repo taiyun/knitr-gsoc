@@ -9,7 +9,7 @@
 - Student postal address: Room 309, Honglou No.1, Renmin University of China, Haidian District, China, 100872
 - Telephone: (86)15201142716
 - Email: taiyun.wei@cos.name
-- Other communications channels: [https://github.com/taiyun](https://github.com/taiyun)
+- Other communications channels: <https://github.com/taiyun>
 
 Student affiliation:
 
@@ -75,12 +75,12 @@ Critical objectives:
 
 ## References:
 
-- knitr,  [https://github.com/yihui/knitr](https://github.com/yihui/knitr)
-- HTML5,  [http://html5.org/](http://html5.org/)
-- XML,  [http://www.w3schools.com/xml/](http://www.w3schools.com/xml/)
-- CSS,  [http://www.w3schools.com/css/](http://www.w3schools.com/css/)
-- Twitter Pandoc,  [https://github.com/twitter/bootstrap](https://github.com/twitter/bootstrap)
-- Pandoc,  [https://github.com/jgm/pandoc](https://github.com/jgm/pandoc)
+- knitr,  <https://github.com/yihui/knitr>
+- HTML5,  <http://html5.org/>
+- XML,  <http://www.w3schools.com/xml/>
+- CSS,  <http://www.w3schools.com/css/>
+- Twitter Pandoc,  <https://github.com/twitter/bootstrap>
+- Pandoc,  <https://github.com/jgm/pandoc>
 
 # MANAGEMENT OF CODING PROJECT
 
@@ -90,7 +90,7 @@ I will communicate with mentors via email frequently; actually, I have been in t
 
 ## How do you propose to ensure code is submitted / tested?
 
-The main repository of **knitr** is here: https://github.com/yihui/knitr, I will fork it and develop code in my forked repository; finally I will send pull requests back to the main repository via GIT. Since this project is involved with output (web pages) all the time, my code can be tested by looking at those pages. Meanwhile, I will write test cases for my code and it will be tested with the **testthat** package when running `R CMD check`.
+The main repository of **knitr** is here: <https://github.com/yihui/knitr>, I will fork it and develop code in my forked repository; finally I will send pull requests back to the main repository via GIT. Since this project is involved with output (web pages) all the time, my code can be tested by looking at those pages. Meanwhile, I will write test cases for my code and it will be tested with the **testthat** package when running `R CMD check`.
 
 ## What is your contigency plan for things not going to schedule?
 
@@ -117,7 +117,7 @@ Education: I got my bachelor degree in Science from Central South University, an
 ## Open source experience and projects
 
 - One of the organizers of the 2nd, 3rd and 4th Chinese R Conference;
-- Editor and administrator of Capital of Statistics (http://cos.name), the most famous professional website on statistics in China, including a highly active R forum;
+- Editor and administrator of Capital of Statistics (<http://cos.name>), the most famous professional website on statistics in China, including a highly active R forum;
 - The [**corrplot**](http://cran.r-project.org/package=corrplot) package, an R package to visualize matrix (especially for the correlation or distance matrix), here are some [examples](https://plus.google.com/photos/108984902637450086329/albums/5683708037443074545?banner=pwa);
 - The [**fun**](http://cran.r-project.org/package=fun) package with co-authors Yihui XIE and Yixuan QIU, a collection of games and funny stuff implemented by R;
 - The **sparseMF** package (under development) with co-author Lanfeng PAN, which include our fast and sparse algorithm to do (non-negative) Matrix Factorization and quantile regression.
