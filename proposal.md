@@ -86,7 +86,6 @@ Critical objectives:
 - Hadley Wickham. *staticdocs: Make static html documentation for a package.* R package version 0.1.
 - Hadley Wickham and Barret Schloerke (2010). *helpr: Help for R*. R package version 0.1.2.2. <http://CRAN.R-project.org/package=helpr>
 - animation, <http://cran.r-project.org/package=animation>
-- highlight, <http://cran.r-project.org/package=highlight>
 - Markdown, <http://daringfireball.net/projects/markdown/>
 - HTML5,  <http://html5.org/>
 - CSS,  <http://www.w3schools.com/css/>
