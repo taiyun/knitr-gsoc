@@ -74,8 +74,16 @@ Critical objectives:
 - New directions for R package authors to write documentation.
 
 ## References:
-- Friedrich Leisch (2002) Dynamic generation of statistical reports using literate data analysis. In W. Härdle and B. Rönz, editors, Compstat 2002 - Proceedings in Computational Statistics, pages 575–580. Physika Verlag, Heidelberg, Germany, ISBN 3-7908-1517-9.
-- knitr,  <https://github.com/yihui/knitr>
+- Friedrich Leisch (2002). *Dynamic generation of statistical reports using literate data analysis.* In W. Härdle and B. Rönz, editors, Compstat 2002 - Proceedings in Computational Statistics, pages 575–580. Physika Verlag, Heidelberg, Germany, ISBN 3-7908-1517-9.
+- Yihui Xie. *knitr: Elegant, Flexible and fast dynamic report generation with R*, <https://github.com/yihui/knitr>
+- Romain Francois (2011). *highlight: Syntax highlighter.* R
+  package version 0.3.1.
+  <http://CRAN.R-project.org/package=highlight>
+- Hadley Wickham. *staticdocs: Make static html documentation
+  for a package.* R package version 0.1.
+- Hadley Wickham and Barret Schloerke (2010). *helpr: Help for R*.
+  R package version 0.1.2.2.
+  <http://CRAN.R-project.org/package=helpr>
 - Markdown, <http://daringfireball.net/projects/markdown/>
 - HTML5,  <http://html5.org/>
 - XML,  <http://www.w3schools.com/xml/>
@@ -111,9 +119,12 @@ Full name: Taiyun Wei
 I got my bachelor degree in Science from Central South University, and currently I am a graduate student majored in Probability and Mathematical Statistics at School of Statistics, Renmin University of China. My statistical background enables me to have a good knowledge of mathematics and programming. My curriculum vitae is [here](https://docs.google.com/open?id=0Bz0D2DDMGlCea1BKNVlNZDhUMHVsdXZiaHJOMnN3dw).
 
 ## Experience of Dynamic Reports
-I was once a internship analyst for Chier Geotechnical Company, and I participated in a railway engineering project of China Railway Seventh Group Corporation(CRSG) in my junior year at CSU. What I did was using some classical models to analyse the roadbed settlement data (RSD) with R, plotting the RSD time series graphs and writing the reports. However, there are more than 5 hundred RSD, so I  had no time to writing these reports almost repetitively.  Fortunately, I found Friedrich Leisch's great job **Sweave**, then I finished the job with great pleasure. 
+I was once a internship analyst for Chier Geotechnical Company, and I participated in a railway engineering project of China Railway Seventh Group Corporation(CRSG) in my junior year at CSU. What I did was using some classical models to analyse the roadbed settlement data (RSD) with R, plotting the RSD time series graphs and writing the reports. However, there are more than 5 hundred RSD, hence I  had no time to writing these reports almost repetitively.  Fortunately, I found Friedrich Leisch's great job **Sweave**, then I finished the job with great pleasure. 
 
-After this project, I realized the importance of dynamic report generation. And I think we should let non-LaTeX users enjoy this skill, and the reports should be more beautiful and support richer format, such as HTML, PDF, WORD, etc. After following and learning Yihui's knitr,  I was very excited about this job. I wrote some of my assignments with knitr with great convenient and I hope knitr be more powerful.
+After this project, I realized the importance of dynamic report generation. I often generated reports, slides with Sweave (sometimes with **highlight** package). 
+And I think non-LaTeX users should also have chances to enjoy this great skill, moreover, the reports should be more beautiful and support more formats, especially HTML and PDF. 
+
+After following and learning Yihui's **knitr**,  I was very excited about it for its beauty and flexibility. I wrote some of my assignments with knitr with great convenience and I hope knitr be more powerful,  especially for generating and maintaining dynamic web; so I apply this project to fulfill the related tasks.
 
 
 
