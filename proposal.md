@@ -82,14 +82,9 @@ Critical objectives:
 
 - Friedrich Leisch (2002). *Dynamic generation of statistical reports using literate data analysis.* In W. Härdle and B. Rönz, editors, Compstat 2002 - Proceedings in Computational Statistics, pages 575–580. Physika Verlag, Heidelberg, Germany, ISBN 3-7908-1517-9.
 - Yihui Xie. *knitr: Elegant, Flexible and fast dynamic report generation with R*, <http://yihui.name/knitr>
-- Romain Francois (2011). *highlight: Syntax highlighter.* R
-  package version 0.3.1.
-  <http://CRAN.R-project.org/package=highlight>
-- Hadley Wickham. *staticdocs: Make static html documentation
-  for a package.* R package version 0.1.
-- Hadley Wickham and Barret Schloerke (2010). *helpr: Help for R*.
-  R package version 0.1.2.2.
-  <http://CRAN.R-project.org/package=helpr>
+- Romain Francois (2011). *highlight: Syntax highlighter.* R package version 0.3.1. <http://CRAN.R-project.org/package=highlight>
+- Hadley Wickham. *staticdocs: Make static html documentation for a package.* R package version 0.1.
+- Hadley Wickham and Barret Schloerke (2010). *helpr: Help for R*. R package version 0.1.2.2. <http://CRAN.R-project.org/package=helpr>
 - animation, <http://cran.r-project.org/package=animation>
 - highlight, <http://cran.r-project.org/package=highlight>
 - Markdown, <http://daringfireball.net/projects/markdown/>
