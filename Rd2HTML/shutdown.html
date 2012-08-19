@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: Shut down the operating system with the command 'shutdown'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for shutdown {fun}"><tr><td>shutdown {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Shut down the operating system with the command &lsquo;shutdown&rsquo;</h2>
+
+<h3>Description</h3>
+
+
+<p>There is a command <CODE>shutdown</CODE> in both Windows and
+Linux, and this function uses it to shut down a computer.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+shutdown(wait = 0)
+</pre>
+
+
+<h3>Arguments</h3>
+
+
+<table summary="R argblock">
+<tr valign="top"><td><code>wait</code></td>
+<td>
+<p>time to wait before shutting down (in
+seconds); passed to <code>Sys.sleep</code></p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+
+<p>After the time <code>wait</code> has passed, R will execute
+<CODE>shutdown -s -t 0</CODE> (for Windows) or
+<CODE>shutdown -h now</CODE> to shut down the computer.
+</p>
+
+
+<h3>Value</h3>
+
+
+<p>The status code of <code>system</code>.
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Yihui Xie &lt;<a href="http://yihui.name">http://yihui.name</a>&gt;
+</p>
+
+
+<h3>References</h3>
+
+
+<p><a href="http://cos.name/en/topic/shut-down-your-windows-with-r">http://cos.name/en/topic/shut-down-your-windows-with-r</a>
+</p>
+
+
+<h3>See Also</h3>
+
+
+<p><code>system</code>, <code>Sys.sleep</code>
+</p>
+
+
+<h3>Examples</h3>
+
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="comment">## Not run: when your code is extremely time-consuming, you may need this</span>
+<span class="comment">## <span class="keyword">function</span>; e.g. you go to sleep, and R is running long computation...</span>
+<span class="comment">## complex graphics... and long long computation... at last,</span>
+<span class="functioncall">shutdown</span>()
+## the <span class="keyword">next</span> day you wake up, <span class="string">'thank you, R'</span> :) <span class="functioncall">End</span>(Not run)
+</pre></div></div></div>
+
+
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>

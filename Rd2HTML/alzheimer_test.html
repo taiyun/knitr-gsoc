@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: Test Alzheimer's disease by finding out the different...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for alzheimer_test {fun}"><tr><td>alzheimer_test {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Test Alzheimer's disease by finding out the different character in
+a character rectangle</h2>
+
+<h3>Description</h3>
+
+
+<p>Please try hard to find the letter &quot;N&quot; in 300 &quot;M&quot;s, one
+&quot;6&quot; in 300 &quot;9&quot;s, etc.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+alzheimer_test(char1 = c("9", "O", "M", "I", "F", 
+    "D"), char2 = c("6", "C", "N", "T", "E", "O"), nr = 10, nc = 30, 
+    seed = NULL, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+
+<table summary="R argblock">
+<tr valign="top"><td><code>char1</code></td>
+<td>
+<p>the 'background' character</p>
+</td></tr>
+<tr valign="top"><td><code>char2</code></td>
+<td>
+<p>the character to be found out</p>
+</td></tr>
+<tr valign="top"><td><code>nr</code></td>
+<td>
+<p>number of rows of the character rectangle</p>
+</td></tr>
+<tr valign="top"><td><code>nc</code></td>
+<td>
+<p>number of columns</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+<p>seed for random number generation</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>other arguments passed to
+<code>set.seed</code></p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+
+<p>Follow the instructions and finish the test.
+</p>
+
+
+<h3>Value</h3>
+
+
+<p>If at least one test item has been passed, a data.frame
+will be returned telling the result of the test.
+</p>
+
+
+<h3>Note</h3>
+
+
+<p>Don't be too serious about this test. I'm no doctor, but
+I think this will be a good present to your friends.
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Yihui Xie &lt;<a href="http://yihui.name">http://yihui.name</a>&gt;
+</p>
+
+
+<h3>Examples</h3>
+
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="comment">## Not run:</span>
+x = <span class="functioncall">alzheimer_test</span>()
+## <span class="functioncall">End</span>(Not run)
+</pre></div></div></div>
+
+
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>

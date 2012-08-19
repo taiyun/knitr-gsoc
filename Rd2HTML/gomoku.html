@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: The game of Gomoku, a.k.a Five in a row</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for gomoku {fun}"><tr><td>gomoku {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>The game of Gomoku, a.k.a Five in a row</h2>
+
+<h3>Description</h3>
+
+
+<p>There are two players in this game who play one after the
+other using black and white stones respectively. The
+winner is the first player to get an unbroken row of five
+stones horizontally, vertically, or diagonally.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+gomoku(n = 19)
+</pre>
+
+
+<h3>Arguments</h3>
+
+
+<table summary="R argblock">
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>the number of rows and columns in the board (the
+default 19 generates the standard board)</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+
+<p><code>NULL</code>
+</p>
+
+
+<h3>Note</h3>
+
+
+<p>The players should judge the winner by themselves; this
+function does not do this job (patches are welcome, of
+course).
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Yihui Xie &lt;<a href="http://yihui.name">http://yihui.name</a>&gt;; modified from the
+code by pklin
+</p>
+
+
+<h3>References</h3>
+
+
+<p><a href="http://cos.name/cn/topic/104750">http://cos.name/cn/topic/104750</a>,
+<a href="http://en.wikipedia.org/wiki/Gomoku">http://en.wikipedia.org/wiki/Gomoku</a>
+</p>
+
+
+<h3>Examples</h3>
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="functioncall">gomoku</span>()
+</pre></div></div><div class="rimage center"><img src="figure/unnamed-chunk-1.png"  class="plot" /></div><div class="rcode">
+<div class="error"><pre class="knitr R">## Error: Non-numeric argument to mathematical function
+</pre></div></div></div>
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>

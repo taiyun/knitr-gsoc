@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: Creating Tag Cloud in R (with Flash and JavaScript)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for tag_cloud {fun}"><tr><td>tag_cloud {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Creating Tag Cloud in R (with Flash and JavaScript)</h2>
+
+<h3>Description</h3>
+
+
+<p>Use R to write tag data (tag words, frequency, hyperlinks
+and colors, etc) into JavaScript, and the JavaScript code
+will generate a Flash movie.  Finally the tag cloud can
+be created with fantastic 3D rotation effect.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+tag_cloud(tagData, htmlOutput = "tagCloud.html", SWFPath, 
+    JSPath, divId = "tagCloudId", width = 600, height = 400, 
+    transparent = FALSE, tcolor = "333333", tcolor2 = "009900", 
+    hicolor = "ff0000", distr = "true", tspeed = 100, version = 9, 
+    bgcolor = "ffffff", useXML = FALSE, htmlTitle = "Tag Cloud", 
+    noFlashJS, target = NULL, scriptOnly = FALSE, encode = FALSE, 
+    reserved = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+
+<table summary="R argblock">
+<tr valign="top"><td><code>tagData</code></td>
+<td>
+<p>a data.frame containing at least 3
+columns: <code>tag</code>, <code>link</code> and <code>count</code>.
+Optional columns are <code>color</code> and <code>hicolor</code></p>
+</td></tr>
+<tr valign="top"><td><code>htmlOutput</code></td>
+<td>
+<p>filename of the HTML output</p>
+</td></tr>
+<tr valign="top"><td><code>SWFPath</code></td>
+<td>
+<p>path of the SWF source file
+(&lsquo;<span class="file">tagcloud.swf</span>&rsquo;); see <code>system.file("js",
+  "tagcloud.swf", package = "fun")</code></p>
+</td></tr>
+<tr valign="top"><td><code>JSPath</code></td>
+<td>
+<p>path of the JavaScript file
+(&lsquo;<span class="file">swfobject.js</span>&rsquo;); see <code>system.file("js",
+  "swfobject.js", package = "fun")</code></p>
+</td></tr>
+<tr valign="top"><td><code>divId</code></td>
+<td>
+<p>id of the tag cloud div (HTML layer)</p>
+</td></tr>
+<tr valign="top"><td><code>width,height</code></td>
+<td>
+<p>width and height of the tag cloud</p>
+</td></tr>
+<tr valign="top"><td><code>transparent</code></td>
+<td>
+<p>logical; whether to use transparent
+backgroud for the Flash movie?</p>
+</td></tr>
+<tr valign="top"><td><code>tcolor,tcolor2,hicolor,distr,tspeed</code></td>
+<td>
+<p>see Details</p>
+</td></tr>
+<tr valign="top"><td><code>version</code></td>
+<td>
+<p>the required Flash version</p>
+</td></tr>
+<tr valign="top"><td><code>bgcolor</code></td>
+<td>
+<p>backgroud color of the Flash movie</p>
+</td></tr>
+<tr valign="top"><td><code>useXML</code></td>
+<td>
+<p>use XML file for the tag information or
+just a string; this will be passed to the Flash object as
+a variable</p>
+</td></tr>
+<tr valign="top"><td><code>htmlTitle</code></td>
+<td>
+<p>title of the HTML file</p>
+</td></tr>
+<tr valign="top"><td><code>noFlashJS</code></td>
+<td>
+<p>text to show if Flash or JavaScript is
+not supported</p>
+</td></tr>
+<tr valign="top"><td><code>target</code></td>
+<td>
+<p>target window of the hyperlinks; possible
+values are <code>NULL</code>, <code>'_blank'</code>, <code>'_top'</code>,
+etc</p>
+</td></tr>
+<tr valign="top"><td><code>scriptOnly</code></td>
+<td>
+<p>print the script in the console only?
+(if <code>TRUE</code>), no HTML file will be generated</p>
+</td></tr>
+<tr valign="top"><td><code>encode</code></td>
+<td>
+<p>encode the tag XML or not? (with
+<code>URLencode</code>) set it to be <code>TRUE</code>
+when your browser does not recognize the tag XML
+correctly</p>
+</td></tr>
+<tr valign="top"><td><code>reserved</code></td>
+<td>
+<p>should reserved characters be encoded?
+see <code>URLencode</code></p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+
+<p>This function is based on the WordPress plugin
+&ldquo;wp-cumulus&rdquo;. If there are any arguments you don't
+understand, please check the reference.
+</p>
+
+
+<h3>Value</h3>
+
+
+<p><code>NULL</code>
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Yihui Xie &lt;<a href="http://yihui.name">http://yihui.name</a>&gt;
+</p>
+
+
+<h3>References</h3>
+
+
+<p>About the WordPress plugin:
+<a href="http://www.roytanck.com/2008/03/15/wp-cumulus-released/">http://www.roytanck.com/2008/03/15/wp-cumulus-released/</a>
+</p>
+<p>Explanation of some arguments:
+<a href="http://www.roytanck.com/2008/05/19/how-to-repurpose-my-tag-cloud-flash-movie/">http://www.roytanck.com/2008/05/19/how-to-repurpose-my-tag-cloud-flash-movie/</a>
+</p>
+<p>Usage of the SWFObject:
+<a href="http://blog.deconcept.com/swfobject/">http://blog.deconcept.com/swfobject/</a>
+</p>
+<p>An example of visualizing tags in my blog:
+<a href="http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/">http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/</a>
+</p>
+
+
+<h3>See Also</h3>
+
+
+<p><code>cat</code>, <code>sprintf</code>,
+<code>URLencode</code>
+</p>
+
+
+<h3>Examples</h3>
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="functioncall">data</span>(tagData)
+htmlFile = <span class="functioncall">paste</span>(<span class="functioncall">tempfile</span>(), <span class="string">".html"</span>, sep = <span class="string">""</span>)
+<span class="functioncall"><span class="keyword">if</span></span> (<span class="functioncall">file.create</span>(htmlFile)) {
+    <span class="functioncall">tag_cloud</span>(tagData, htmlFile)
+    <span class="functioncall"><span class="keyword">if</span></span> (!<span class="functioncall">interactive</span>()) 
+        <span class="functioncall">browseURL</span>(htmlFile)
+}
+</pre></div><div class="output"><pre class="knitr R">## HTML file created at  C:\Users\cloud\AppData\Local\Temp\RtmpUtGeT9\file159877c26655.html
+</pre></div></div></div>
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: Tag information of Yihui Xie's English blog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for tagData {fun}"><tr><td>tagData {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Tag information of Yihui Xie's English blog</h2>
+
+<h3>Description</h3>
+
+
+<p>Tag data collected from Yihui Xie's Blog, containing the
+tag words, frequency and hyperlinks, etc.
+</p>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 45 observations on the following 5
+variables.  </p>
+ <dl>
+<dt>tag</dt><dd><p>a character vector; the tag
+words</p>
+</dd> <dt>link</dt><dd><p>a character vector; hyperlinks of tags</p>
+</dd>
+<dt>count</dt><dd><p>a numeric vector; the frequency of tags in blogs (see
+Details)</p>
+</dd> <dt>color</dt><dd><p>a character vector in hexadecimal format
+specifying the RGB component of tag colors</p>
+</dd> <dt>hicolor</dt><dd><p>a
+character vector similar to <code>color</code>; the color when mouse
+hangs over the tag</p>
+</dd> </dl>
+
+
+<h3>Details</h3>
+
+
+<p>The <code>count</code> was multiplied by 4 in the data in order
+that the tag cloud could be more clear.
+</p>
+
+
+<h3>Source</h3>
+
+
+<p><a href="http://yihui.name/en/">http://yihui.name/en/</a> (accessed on June 10, 2009)
+</p>
+
+
+<h3>Examples</h3>
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="functioncall">data</span>(tagData)
+<span class="functioncall">hist</span>(tagData$count/4, 10)  # extremely right skewed
+</pre></div></div><div class="rimage center"><img src="figure/unnamed-chunk-1.png"  class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr R"># see <span class="functioncall">help</span>(tag_cloud) <span class="keyword">for</span> the example of creating tag cloud with this data
+</pre></div></div></div>
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>

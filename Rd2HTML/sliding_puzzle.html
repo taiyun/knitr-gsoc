@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: Sliding puzzle in R</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for sliding_puzzle {fun}"><tr><td>sliding_puzzle {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Sliding puzzle in R</h2>
+
+<h3>Description</h3>
+
+
+<p>Use R to play sliding puzzle (currently only the Windows
+screen display).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+sliding_puzzle(size = c(3, 3), bg = "lightblue", z = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+
+<table summary="R argblock">
+<tr valign="top"><td><code>size</code></td>
+<td>
+<p>two dimensional vector, the size of sliding
+puzzle. Note: the element of <code>size</code> must be greater
+than 1.</p>
+</td></tr>
+<tr valign="top"><td><code>bg</code></td>
+<td>
+<p>the background color of blocks.</p>
+</td></tr>
+<tr valign="top"><td><code>z</code></td>
+<td>
+<p>the matrix of sliding puzzle, if z is specified,
+<code>size</code> will be omited.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+
+<p>If <code>size</code> is specified and <code>z</code> is <code>NULL</code>,
+then the function will generate a solvable sliding
+puzzle. In addition, the function only works under the
+Windows screen display because of the limitation of
+function <code>getGraphicsEvent</code>.
+</p>
+
+
+<h3>Note</h3>
+
+
+<p>Linux/Mac users have to use
+<code>X11(type = 'Xlib')</code> or the Cairo
+graphics device <code>Cairo()</code> in the package
+<span class="pkg">cairoDevice</span>.
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Taiyun Wei
+</p>
+
+
+<h3>References</h3>
+
+
+<p>About the sliding puzzle:
+<a href="http://en.wikipedia.org/wiki/Sliding_puzzle">http://en.wikipedia.org/wiki/Sliding_puzzle</a>
+</p>
+<p>How to Solve a Slider Puzzle:
+<a href="http://www.justadventure.com/articles/Slider/Slider.shtm">http://www.justadventure.com/articles/Slider/Slider.shtm</a>
+</p>
+
+
+<h3>Examples</h3>
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R">## should use Xlib <span class="keyword">for</span> the <span class="functioncall">x11</span>() device under *nix, e.g
+</pre></div></div></div>
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="comment">## Not run:</span>
+<span class="functioncall"><span class="keyword">if</span></span> (.Platform$OS.type == <span class="string">"windows"</span>) <span class="functioncall">x11</span>() <span class="keyword">else</span> <span class="functioncall">x11</span>(type = <span class="string">"Xlib"</span>)
+## <span class="functioncall">End</span>(Not run)
+</pre></div></div></div>
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="functioncall">sliding_puzzle</span>()
+</pre></div></div><div class="rimage center"><img src="figure/unnamed-chunk-31.png"  class="plot" /></div><div class="rcode">
+<div class="error"><pre class="knitr R">## Error: this graphics device does not support event handling
+</pre></div><div class="source"><pre class="knitr R"><span class="functioncall">sliding_puzzle</span>(z = <span class="functioncall">matrix</span>(0:11, 3, 4))
+</pre></div><div class="warning"><pre class="knitr R">## Warning: Because "z" is specified, parameter "size" will be ignored.
+</pre></div></div><div class="rimage center"><img src="figure/unnamed-chunk-32.png"  class="plot" /></div><div class="rcode">
+<div class="error"><pre class="knitr R">## Error: this graphics device does not support event handling
+</pre></div></div></div>
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>

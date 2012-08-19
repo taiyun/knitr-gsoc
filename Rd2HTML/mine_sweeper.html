@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<style type="text/css">.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}, 
+.warning {
+	font-weight: bold;
+} 
+.message {
+	font-style: italic;
+} 
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f7f7f7;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+.background {
+  color: #F7F7F7;
+}
+
+.number {
+  color: #000000;
+}
+
+.functioncall {
+  color: #800054;
+  font-weight: bolder;
+}
+
+.string {
+  color: #9999FF;
+}
+
+.keyword {
+  font-weight: bolder;
+  color: black;
+}
+
+.argument {
+  color: #B04005;
+}
+
+.comment {
+  color: #2E9957;
+}
+
+.roxygencomment {
+  color: #707AB3;
+}
+
+.formalargs {
+  color: #B04005;
+}
+
+.eqformalargs {
+  color: #B04005;
+}
+
+.assignement {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.package {
+  color: #96B525;
+}
+
+.slot {
+  font-style: italic;
+}
+
+.symbol {
+  color: #000000;
+}
+
+.prompt {
+  color: #333333;
+}
+</style><title>R: Play the Miner game in R</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head><body>
+
+<table width="100%" summary="page for mine_sweeper {fun}"><tr><td>mine_sweeper {fun}</td><td align="right">R Documentation</td></tr></table>
+
+<h2>Play the Miner game in R</h2>
+
+<h3>Description</h3>
+
+
+<p>The controls should be familiar to you: Click the left
+mouse button to dig in an area, and right button to mark
+or unmark the area with flags.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mine_sweeper(width = 10, height = 10, mines = 20, 
+    text.cex = 2, cheat = FALSE, seed = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+
+<table summary="R argblock">
+<tr valign="top"><td><code>width</code></td>
+<td>
+<p>number of grids in horizontal axis</p>
+</td></tr>
+<tr valign="top"><td><code>height</code></td>
+<td>
+<p>number of grids in vertical axis</p>
+</td></tr>
+<tr valign="top"><td><code>mines</code></td>
+<td>
+<p>number of mines</p>
+</td></tr>
+<tr valign="top"><td><code>text.cex</code></td>
+<td>
+<p>the amount by which text in graphics
+should be magnified relative to the default. Adjust this
+parameter when the size of text doesn't fit the grid</p>
+</td></tr>
+<tr valign="top"><td><code>cheat</code></td>
+<td>
+<p>logical. If <code>TRUE</code> a matrix indicating
+the mines will be printed</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+<p>seed for random number generator</p>
+</td></tr>
+</table>
+
+
+<h3>Note</h3>
+
+
+<p>Linux/Mac users have to use <code>X11(type = 'Xlib')</code> or
+the Cairo graphics device <code>Cairo()</code> in the package
+<span class="pkg">cairoDevice</span>.
+</p>
+
+
+<h3>Author(s)</h3>
+
+
+<p>Yixuan Qiu <a href="mailto:yixuan.qiu@cos.name">yixuan.qiu@cos.name</a>
+</p>
+
+
+<h3>References</h3>
+
+
+<p><a href="http://en.wikipedia.org/wiki/Minesweeper_(computer_game)">http://en.wikipedia.org/wiki/Minesweeper_(computer_game)</a>
+</p>
+
+
+<h3>Examples</h3>
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R">## should use Xlib <span class="keyword">for</span> the <span class="functioncall">x11</span>() device under *nix, e.g
+</pre></div></div></div>
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="comment">## Not run:</span>
+<span class="functioncall"><span class="keyword">if</span></span> (.Platform$OS.type == <span class="string">"windows"</span>) <span class="functioncall">x11</span>() <span class="keyword">else</span> <span class="functioncall">x11</span>(type = <span class="string">"Xlib"</span>)
+## <span class="functioncall">End</span>(Not run)
+</pre></div></div></div>
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="functioncall">mine_sweeper</span>()
+</pre></div></div><div class="rimage center"><img src="figure/unnamed-chunk-3.png"  class="plot" /></div><div class="rcode">
+<div class="error"><pre class="knitr R">## Error: this graphics device does not support event handling
+</pre></div></div></div>
+
+
+
+
+<hr><div align="center">[Package <em>fun</em> version 0.1-0 ]</div>
+</body></html>
